@@ -27,7 +27,7 @@ if [ $? -eq 0 ]; then
     echo "Compilation successful! Running ${filename}.exe..."
     echo "----------------------------------------"
     ./"${filename}.exe"
-    echo "----------------------------------------"
+    echo "\n----------------------------------------"
     echo "Program exited with code: $?"
 else
     echo "Compilation failed!"

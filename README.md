@@ -168,6 +168,8 @@ If a concept feels fuzzy, stop and rebuild it.
 - Exception handling mechanics
 - Why exceptions are avoided in CP
 
+**Outcome:** You handle I/O and errors without disrupting contest flow.
+
 ---
 
 ## Phase 7 — C++ Specifically for Competitive Programming
