@@ -29,6 +29,43 @@ Think of memory as two worlds:
 - Lifetime independent of scope
 - Dies only when you kill it
 
+### Visual Comparison
+
+```
+STACK MEMORY                          HEAP MEMORY
+(Fast, Automatic, Scope-bound)        (Slow, Manual, Persistent)
+
+High Addresses                        High Addresses
++------------------+                  +------------------+
+|                  |                  |                  |
+|   Function B     |                  |                  |
+|   Variables      |                  |   Dynamic Data   |
+|                  |                  |                  |
++------------------+                  +------------------+
+|                  |                  |                  |
+|   Function A     |                  |   More Data      |
+|   Variables      |                  |                  |
+|                  |                  +------------------+
++------------------+                  |                  |
+|                  |                  |   Your Objects   |
+|   main()         |                  |   (new/delete)   |
+|   Variables      |                  |                  |
++------------------+                  +------------------+
+|                  |                  |                  |
+|   Program Code   |                  |   Free Space     |
+|   & Constants    |                  |   (grows ↑)      |
+|                  |                  |                  |
+Low Addresses     Low Addresses       Low Addresses     Low Addresses
+     ↓                    ↑                  ↓                    ↑
+  Grows Downward     Stack Pointer      Grows Upward     Heap Pointer
+
+Key Differences:
+• Stack: LIFO (Last In, First Out)    • Heap: No order constraints
+• Stack: Fixed size, limited          • Heap: Dynamic size, flexible  
+• Stack: Fast allocation/dealloc      • Heap: Slower, manual management
+• Stack: Thread-local                 • Heap: Shared across program
+```
+
 ### Drill 1: Stack Lifetime (Write + Break)
 
 ```cpp
