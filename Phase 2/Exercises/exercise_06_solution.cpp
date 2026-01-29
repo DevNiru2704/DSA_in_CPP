@@ -2,6 +2,7 @@
 #include <vector>
 #include <chrono>
 #include <thread>
+#include <cstring>
 using namespace std;
 
 // Exercise 6: Memory Leak Detector

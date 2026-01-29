@@ -158,8 +158,9 @@ public:
                 }
             }
 
-            for (const AllocationInfo &info : allocations)
+            for (const auto &pair : allocations)
             {
+                const AllocationInfo &info = pair.second;
                 if (!info.file.empty())
                 {
                     fileAllocations[info.file] += info.size;

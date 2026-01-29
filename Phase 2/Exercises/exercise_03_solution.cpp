@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 // Exercise 3: Pointer Arithmetic Mastery
